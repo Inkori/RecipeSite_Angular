@@ -10,7 +10,7 @@ export class RecipeService {
     new Recipe(
       'A test recipe',
       'Text fish fish',
-      `https://get.pxhere.com/photo/restaurant-dish-meal-food-salad-vegetable-plate-seafood-kitchen-recipe-snack-eat-fast-food-lunch-cuisine-chicken-rice-broccoli-asian-food-garnish-dinner-vegetarian-food-potatoes-junk-food-thai-food-side-dish-diet-food-leaf-vegetable-1375811.jpg`,
+      `https://www.maxpixel.net/static/photo/1x/Mushrooms-Recipe-Kitchen-French-Dish-2459679.jpg`,
       [
         new Ingredient('Meat', 1),
         new Ingredient('Burger', 1)
@@ -28,6 +28,10 @@ export class RecipeService {
   constructor(private slServise: ShopingListService) {}
   getRecipes() {
     return this.recipes.slice();
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 
   addIngridientsToShopingList( ingridients: Ingredient[]) {

@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +14,10 @@ import { ShopingListComponent } from './shoping-list/shoping-list.component';
 import { ShopingEditComponent } from './shoping-list/shoping-edit/shoping-edit.component';
 import { DropdownDirective } from './shared/dropdown.diractive';
 import { ShopingListService } from './shoping-list/shoping-list.service';
-import { Router } from '@angular/router';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+
+
 
 @NgModule({
   declarations: [
@@ -25,11 +29,14 @@ import { Router } from '@angular/router';
     RecipesItemComponent,
     ShopingListComponent,
     ShopingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [ShopingListService],
   bootstrap: [AppComponent]
